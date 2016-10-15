@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User</title>    
+    <style>
+	.hide{
+    display:none;
+}
+.display{
+    display:block;
+    color:red;
+}
+    </style>
+</head>
+<body class="background_color">
+  <div class="container" style="padding-left:28%;padding-top:15%;"><img src="static/lib/img/logo.png" style="padding-left:12%">
+   <div class="section-title form-group">
+       <label  ng-class="class"  id="errLogin">Invalid credentials</label>
+   </div>
+    <form role="form" style="padding-top:5%">
+      <div class=" form-group" >
+        <div class="input-group col-md-6">
+          <span class="input-group-addon "><i class="glyphicon glyphicon-user"></i></span>
+            <input class="form-control" placeholder="user name" id="username" type="user name">
+        </div>
+      </div>
+
+      <div class=" form-group" >
+        <div class="input-group col-md-6">
+          <span class="input-group-addon "><i class="glyphicon glyphicon-lock"></i></span>
+            <input class="form-control" placeholder="Password" id="password" type="password">
+        </div>
+      </div>
+    </form>
+
+    <div class="checkbox">
+     <label><input type="checkbox"> Remember me</label>
+    </div>
+
+    <button type="Log In" class="btn btn-success" style="border-color:#449D44" ng-click="smartBuildingsLoginForm()">Log In</button>
+    <button type="Sign Up" class="btn btn-success" style="border-color:#449D44" data-toggle="modal" data-target="#modal-1">Sign Up</button> 
+
+
+
+<!-- <div class="container"> -->
+  <div class="modal" id="modal-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" type="button" data-dismiss="modal"> &times;</button>
+            <h4 class="modal-title"> Registration</h4>
+
+            <div class="modal-body" >
+          
+            <form role="form" >
+            <div class=" form-group" >
+                <div class="input-group col-md-12" style="padding-left:20%; padding-right:20%">
+                  <span class="input-group-addon "><i class="glyphicon glyphicon-user"></i></span>
+                    <input class="form-control" placeholder="user name" id="user name" type="user name" ng-keypress="submitOnEnter($event)">
+                </div><h6></h6></div>
+
+
+              <div class=" form-group" >
+                <div class="input-group col-md-12" style="padding-left:20%; padding-right:20%">
+                  <span class="input-group-addon "><i class="glyphicon glyphicon-lock"></i></span>
+                    <input class="form-control" placeholder="password" id="passowrd" type="password" ng-keypress="submitOnEnter($event)">
+                </div><h6></h6></div>
+
+
+              <div class=" form-group" >
+                <div class="input-group col-md-12" style="padding-left:20%; padding-right:20%">
+                  <span class="input-group-addon "><i class="glyphicon glyphicon-lock"></i></span>
+                    <input class="form-control" placeholder="re-confirm password" id="re-confirm password" type="re-confirm password">
+                </div><h6></h6></div>
+
+          <div class=" form-group" >
+                <div class="input-group col-md-12" style="padding-left:20%; padding-right:20%">
+                  <span class="input-group-addon "><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input class="form-control" placeholder="E-Mail" id="E-Mail" type="E-Mail">
+                </div><h6></h6>
+              </div>
+
+
+              
+          <div class=" form-group" >
+                <div class="input-group col-md-12" style="padding-left:20%; padding-right:20%">
+                  <span class="input-group-addon "><i class="glyphicon glyphicon glyphicon-earphone"></i></span>
+                    <input class="form-control" placeholder="contact number" id="contact number" type="contact number">
+                </div><h6></h6>
+              </div>
+              
+          <div class=" form-group" >
+                <div class="input-group col-md-12" style="color:rgba(146, 138, 138, 1);padding-left:20%; padding-right:20%">
+                  <span class="input-group-addon "><i class="glyphicon glyphicon-briefcase"></i></span>
+                    
+                   <select  style="width:100%;padding:0%;height: 32px;">
+                   <option style="display:none"> Company</option>
+                   <option>Igate</option>
+                   <option>mindtree</option>
+                   </select>
+                </div>
+              </div>                                    
+
+
+
+              <button type="save" class="btn btn-default" style="margin-left:20%" >Save</button>
+
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+  </form>
+</div>
+</body>
+
+
+
+
+<!-- <div>
+
+
+    <div id="login_page_form" name = "smartbuilding_login_form">
+    <div class="form-horizontal">
+        <div class="section-title form-group">
+            <img src="static/lib/img/logo.png" style="margin-left:9%;">
+             <label ng-class="class" id="errLogin"style="margin-left:9%;margin-top:5%;font-size:14px;">Invalid credentials</label>
+        </div>
+        <div class=" form-group" style="margin-top:5%;">
+            <div class="input-group col-md-6">
+                <span class="input-group-addon "><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" required="required" id="username" name="username" class="form-control" placeholder="Username" />
+            </div>
+        </div>
+        <div class=" form-group" style="margin-top:5%;">
+            <div class="input-group col-md-6">
+                <span class="input-group-addon "><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="password" required="required" name="password" id="password" class="form-control " placeholder="Password" ng-keypress="submitOnEnter($event)" />
+            </div>
+        </div>
+        <div class="form-group">
+            <button style="margin-top:5%;margin-left:18%;" type="button" ng-click="smartBuildingsLoginForm()" class="btn btn-success" id="login_submit">LogIn &nbsp; <i class="icon-chevron-right"></i></button>
+         </div>
+
+	<div class=" form-group" style="margin-top:5%;">
+            <div class="input-group col-md-6" style="text-align:center;">
+              <a href="" class="green" style="font-size:14px;" >Forgot your Password</a>
+            </div>
+        </div>
+
+
+
+         </div>
+
+    </div>
+ -->

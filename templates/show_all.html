@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+      
+      <h3>
+         <a href = "{{ url_for('show_all') }}">Oppurtunities</a>
+      </h3>
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+		
+      
+      <table>
+         
+         <tbody>
+            {% for user in users %}
+               <tr>
+                  <td>{{ user.Title }}</td>
+                  <td>{{ user.Content }}</td>
+                  <td>{{ user.Location }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      
+   </body>
+</html>
